@@ -1,0 +1,13 @@
+@mixin responsive($i) {
+    @if $i == desktop {
+        @media (min-width: $break-point-2) { @content; }
+    } @else if $i == tablet {
+        @media (min-width: $break-point-1) {
+            @media (max-width: $break-point-2) {
+                @content;
+            }
+        }
+    } @else if $i == mobile {
+        @media (max-width: $break-point-1) { @content; }
+    }
+}

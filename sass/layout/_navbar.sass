@@ -1,0 +1,78 @@
+.top-nav
+    &, *
+        //border: 1px solid red
+    background: $black
+    list-style-type: none
+    margin: 0
+    overflow: hidden
+    @include responsive (desktop)
+        padding-left: 40px
+        padding-right: 40px
+    @include responsive (tablet)
+        padding-left: 20px
+        padding-right: 20px
+    @include responsive (mobile)
+        padding-left: 8px
+        padding-right: 8px
+    a
+        display: block
+        color: $white
+        text-decoration: none
+        text-align: center
+        tab-index: 1
+        &:hover
+            color: darken($white, 25%)
+    .nav-mobile-expander
+        display: none
+        @include responsive (mobile)
+            display: block
+            float: center
+            padding: 2px
+            padding-top: 2px
+            padding-bottom: 2px
+            a
+                padding: 8px
+                padding-top: 18px
+                padding-bottom: 18px
+                font-size: 20px
+    &>*:not(:last-of-type)
+        border-bottom: 1px solid darken($black, 5%)
+    .nav-item
+        @include responsive (desktop)
+            float: left
+            padding: 1px
+            padding-top: 4px
+            padding-bottom: 4px
+            a
+                padding: 7px
+                padding-top: 12px
+                padding-bottom: 12px
+                font-size: 16px
+            &.nav-right
+                float: right
+        @include responsive (tablet)
+            float: left
+            padding: 2px
+            padding-top: 6px
+            padding-bottom: 6px
+            a
+                padding: 5px
+                padding-top: 14px
+                padding-bottom: 14px
+                font-size: 18px
+            &.nav-right
+                float: right
+        @include responsive (mobile)
+            display: block
+            float: center
+            padding: 2px
+            padding-top: 2px
+            padding-bottom: 2px
+            a
+                padding: 8px
+                padding-top: 18px
+                padding-bottom: 18px
+                font-size: 20px
+    .nav-mobile-hidden
+        @include responsive(mobile)
+            display: none
