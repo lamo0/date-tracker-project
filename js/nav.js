@@ -15,10 +15,7 @@ navExpanderLink.addEventListener("mousedown", () => {
         navbar.querySelectorAll(".nav-item")[i].classList.toggle("nav-mobile-hidden")
     
     // Toggle the text
-    if (navExpanderLink.innerText == "V")
-        navExpanderLink.innerText = "^"
-    else
-        navExpanderLink.innerText = "V"
+    navExpanderLink.innerText = (navExpanderLink.innerText == "V") ? "^" : "V"
 })
 
 // Add nav expander link
