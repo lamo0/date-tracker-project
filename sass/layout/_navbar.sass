@@ -13,11 +13,11 @@
         padding-left: $page-margin-mobile
         padding-right: $page-margin-mobile
     .nav-item
+        position: relative
         a
-            display: inline-block
+            display: block
             color: $nav-font-color
             text-decoration: none
-            tab-index: 1
             &:hover
                 color: lighten($nav-font-color, 20%)
         @include responsive (desktop)
@@ -32,6 +32,7 @@
             &.nav-left
                 float: left
         @include responsive (tablet)
+            position: relative
             float: right
             padding-top: 18px
             padding-bottom: 18px
@@ -55,8 +56,12 @@
     .nav-mobile-expander
         display: none
         @include responsive(mobile)
+            position: absolute
+            font-size: 25px
+            right: 6px
+            top: 6px
             display: inline
-            float: right
             cursor: pointer
             padding: 20px
             user-select: none
+            z-index: 2 

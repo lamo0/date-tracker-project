@@ -1,10 +1,12 @@
 // Create Element Variables
 const navbar = document.querySelector(".top-nav")
 const navExpander = document.createElement("li")
-const navExpanderLink = document.createElement("span")
 
 // Set Element Attributes
 navExpander.setAttribute("class", "nav-mobile-expander")
+
+// Add nav expander text
+navExpander.innerText = "^"
 
 // Mousedown Event Listener
 navExpander.addEventListener("mousedown", () => {
@@ -14,12 +16,8 @@ navExpander.addEventListener("mousedown", () => {
         navbar.querySelectorAll(".nav-item")[i].classList.toggle("nav-mobile-hidden")
     
     // Toggle the text
-    navExpanderLink.innerText = (navExpanderLink.innerText == "V") ? "^" : "V"
+    navExpander.innerText = (navExpander.innerText == "V") ? "^" : "V"
 })
-
-// Add nav expander link
-navExpander.append(navExpanderLink)
-navExpanderLink.innerText = "V"
 
 window.onload = () => {
     // Loop through all nav-items, except for the first one
