@@ -1,0 +1,19 @@
+.content
+    @include responsive (desktop)
+        padding-left: $page-margin-desktop
+        padding-right: $page-margin-desktop
+        padding-top: 30px
+        padding-bottom: 30px
+    @include responsive (tablet)
+        padding-left: $page-margin-tablet
+        padding-right: $page-margin-tablet
+        padding-top: 24px
+        padding-bottom: 24px
+    @include responsive (mobile)
+        padding-left: $page-margin-mobile
+        padding-right: $page-margin-mobile
+        padding-top: 18px
+        padding-bottom: 18px
+.content-inverse
+    background: $page-font-color
+    color: $page-background-color

@@ -6,7 +6,7 @@ const navExpander = document.createElement("li")
 navExpander.setAttribute("class", "nav-mobile-expander")
 
 // Add nav expander text
-navExpander.innerText = "^"
+navExpander.innerText = "V"
 
 // Mousedown Event Listener
 navExpander.addEventListener("mousedown", () => {

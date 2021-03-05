@@ -1,8 +1,55 @@
 *
-    font-family: $base-font
-    font-size: $base-font-size
+    font-family: $page-font
+    font-size: $page-font-size
 a
-    color: $base-font-color
+    color: $page-font-color
 h1, h2, h3, h4, h5, h6
     margin: 0
     padding: 0
+    line-height: 1.4
+    font-weight: 400
+.align-right
+    text-align: right
+p
+    padding: 0
+    margin: 0
+    line-height: 1.3
+@include responsive (desktop)
+    h1
+        font-size: $h1-font-size-desktop
+    h2
+        font-size: $h2-font-size-desktop
+    h3
+        font-size: $h3-font-size-desktop
+    h4
+        font-size: $h4-font-size-desktop
+    h5
+        font-size: $h5-font-size-desktop
+    h6
+        font-size: $h6-font-size-desktop
+@include responsive (tablet)
+    h1
+        font-size: $h1-font-size-tablet
+    h2
+        font-size: $h2-font-size-tablet
+    h3
+        font-size: $h3-font-size-tablet
+    h4
+        font-size: $h4-font-size-tablet
+    h5
+        font-size: $h5-font-size-tablet
+    h6
+        font-size: $h6-font-size-tablet
+@include responsive (mobile)
+    h1
+        font-size: $h1-font-size-mobile
+    h2
+        font-size: $h2-font-size-mobile
+    h3
+        font-size: $h3-font-size-mobile
+    h4
+        font-size: $h4-font-size-mobile
+    h5
+        font-size: $h5-font-size-mobile
+    h6
+        font-size: $h6-font-size-mobile

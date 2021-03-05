@@ -23,7 +23,7 @@
         @include responsive (desktop)
             float: right
             padding-top: 40px
-            padding-bottom: 40px
+            padding-bottom: 10px
             padding-left: 30px
             padding-right: 30px
             a
@@ -31,11 +31,13 @@
                 padding: 15px
             &.nav-left
                 float: left
+            &:first-of-type
+                padding-right: 0
         @include responsive (tablet)
             position: relative
             float: right
             padding-top: 18px
-            padding-bottom: 18px
+            padding-bottom: 10px
             padding-left: 12px
             padding-right: 12px
             a
@@ -43,6 +45,8 @@
                 padding: 12px
             &.nav-left
                 float: left
+            &:first-of-type
+                padding-right: 0
         @include responsive (mobile)
             display: block
             padding: 6px

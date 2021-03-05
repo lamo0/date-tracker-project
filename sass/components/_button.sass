@@ -1,0 +1,11 @@
+button, .button, [type="submit"], [type="button"]
+    padding: 14px
+    cursor: pointer
+    border: 2px solid $page-font-color
+    color: $page-font-color
+    background: $page-background-color
+    transition: all 0.1s ease-out
+    &:hover
+        background: darken($page-background-color, 8%)
+    &:active
+        background: darken($page-background-color, 12%)
