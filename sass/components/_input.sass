@@ -8,3 +8,15 @@ input:not([type=submit]):not([type=button])
         background: darken($page-background-color, 2%)
         box-shadow: 0 0 0 1px $page-font-color inset
         outline: none
+textarea
+    width: 100%
+    resize: vertical
+    min-height: 300px
+    padding: 14px
+    border: 2px solid $page-font-color
+    color: $page-font-color
+    background: $page-background-color
+    &:focus
+        background: darken($page-background-color, 2%)
+        box-shadow: 0 0 0 1px $page-font-color inset
+        outline: none

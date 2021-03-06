@@ -209,10 +209,13 @@ hr {
 
 * {
   font-family: "Segoe UI";
-  font-size: 22px; }
+  font-size: 1.12rem; }
 
 a {
-  color: #111; }
+  color: #0275d8; }
+
+br {
+  line-height: 150%; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -464,14 +467,55 @@ p {
       padding-top: 18px;
       padding-bottom: 18px; } }
 
-form {
+.form {
   line-height: 1.5; }
-  form > :not(:last-of-type) {
+  .form > :not(:last-of-type) {
     margin-bottom: 10px; }
+
+.static-panel, .static-panel * {
+  -border: 1px solid red; }
+
+@media (min-width: 1200px) {
+  .static-panel {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    min-width: auto;
+    max-width: 1400px;
+    margin: auto;
+    -ms-grid-columns: 210px minmax(auto, 1000px) 210px;
+    grid-template-columns: 210px minmax(auto, 1000px) 210px; }
+    .static-panel .panel-left, .static-panel .panel-right {
+      position: relative; }
+      .static-panel .panel-left .panel-side-content, .static-panel .panel-right .panel-side-content {
+        position: fixed;
+        width: 210px;
+        padding: 25px;
+        padding-top: 0;
+        font-size: 20px; } }
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .static-panel {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px auto;
+    grid-template-columns: 200px auto; }
+    .static-panel .panel-left {
+      position: relative; }
+      .static-panel .panel-left .panel-side-content {
+        position: fixed;
+        width: 200px;
+        padding: 22px;
+        padding-top: 0;
+        font-size: 20px; }
+    .static-panel .panel-right {
+      margin-top: 1rem;
+      -ms-grid-column: 2;
+      grid-column: 2; } }
 
 button, .button, [type="button"] {
   padding: 14px;
-  font-size: 22px;
+  font-size: 1.12rem;
   cursor: pointer;
   border: 2px solid #111;
   color: #111;
@@ -485,7 +529,7 @@ button, .button, [type="button"] {
     background: #e0e0e0; }
   button.button-small, .button.button-small, [type="button"].button-small {
     padding: 10px;
-    font-size: 20px; }
+    font-size: 1.25rem; }
   button.button-inverse, .button.button-inverse, [type="button"].button-inverse {
     border-color: #fff;
     color: #fff;
@@ -502,6 +546,20 @@ input:not([type=submit]):not([type=button]) {
   color: #111;
   background: #fff; }
   input:not([type=submit]):not([type=button]):focus {
+    background: #fafafa;
+    -webkit-box-shadow: 0 0 0 1px #111 inset;
+    box-shadow: 0 0 0 1px #111 inset;
+    outline: none; }
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 300px;
+  padding: 14px;
+  border: 2px solid #111;
+  color: #111;
+  background: #fff; }
+  textarea:focus {
     background: #fafafa;
     -webkit-box-shadow: 0 0 0 1px #111 inset;
     box-shadow: 0 0 0 1px #111 inset;

@@ -1,0 +1,37 @@
+.static-panel
+    &, *
+        -border: 1px solid red
+    @include responsive(desktop)
+        display: grid
+        position: relative
+        min-width: auto
+        max-width: $break-point-2 + 200
+        margin: auto
+        grid-template-columns: (($break-point-2 - 780) / 2) minmax(auto, 1000px) (($break-point-2 - 780) / 2)
+        .panel-left, .panel-right
+            position: relative
+            .panel-side-content
+                position: fixed
+                width: (($break-point-2 - 780) / 2)
+                padding: 25px
+                padding-top: 0
+                font-size: $panel-font-size-desktop
+    @include responsive(tablet)
+        display: grid
+        grid-template-columns: $break-point-1 - 500 auto
+        .panel-left
+            position: relative
+            .panel-side-content
+                position: fixed
+                width: $break-point-1 - 500
+                padding: 22px
+                padding-top: 0
+                font-size: $panel-font-size-tablet
+        .panel-right
+            margin-top: 1rem
+            grid-column: 2;
+    @include responsive(mobile)
+        .panel-left
+        .panel-right
+        .panel-content
+// 380px
