@@ -1,5 +1,6 @@
-button, .button, [type="submit"], [type="button"]
+button, .button, [type="button"]
     padding: 14px
+    font-size: $page-font-size
     cursor: pointer
     border: 2px solid $page-font-color
     color: $page-font-color
@@ -9,3 +10,14 @@ button, .button, [type="submit"], [type="button"]
         background: darken($page-background-color, 8%)
     &:active
         background: darken($page-background-color, 12%)
+    &.button-small
+        padding: 10px
+        font-size: $page-font-size - 2px
+    &.button-inverse
+        border-color: $page-background-color
+        color: $page-background-color
+        background: $page-font-color
+        &:hover
+            background: lighten($page-font-color, 8%)
+        &:active
+            background: lighten($page-font-color, 12%)
