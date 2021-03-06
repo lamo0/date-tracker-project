@@ -16,6 +16,10 @@
                 padding: 25px
                 padding-top: 0
                 font-size: $panel-font-size-desktop
+                &.panel-side-not-fixed
+                    position: static
+        .panel-right .panel-side-content
+            font-size: $panel-right-font-size-desktop
     @include responsive(tablet)
         display: grid
         grid-template-columns: $break-point-1 - 500 auto
@@ -30,8 +34,11 @@
         .panel-right
             margin-top: 1rem
             grid-column: 2;
-    @include responsive(mobile)
-        .panel-left
-        .panel-right
         .panel-content
+            margin-right: $page-margin-tablet
+    @include responsive(mobile)
+        .panel-left, .panel-right, .panel-content
+            padding-left: $page-margin-mobile
+            padding-right: $page-margin-mobile
+            padding-top: 30px
 // 380px
