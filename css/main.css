@@ -280,8 +280,8 @@ p {
   background: #fff; }
   @media (min-width: 1200px) {
     .top-nav {
-      padding-left: 300px;
-      padding-right: 300px; } }
+      padding-left: 260px;
+      padding-right: 260px; } }
 
 @media (min-width: 700px) and (max-width: 1200px) {
   .top-nav {
@@ -417,8 +417,8 @@ p {
 
 @media (min-width: 1200px) {
   .content {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 260px;
+    padding-right: 260px;
     padding-top: 30px;
     padding-bottom: 30px; } }
 
@@ -449,8 +449,8 @@ p {
     vertical-align: middle; }
   @media (min-width: 1200px) {
     .banner {
-      padding-left: 300px;
-      padding-right: 300px;
+      padding-left: 260px;
+      padding-right: 260px;
       padding-top: 30px;
       padding-bottom: 30px; } }
 
